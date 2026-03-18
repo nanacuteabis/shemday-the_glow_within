@@ -1,36 +1,36 @@
 const quotes = {
   "kucing": {
     "oren": [
-      "Hidup ini lucu, nikmati setiap momennya 😎",
-      "Jika kucing bisa tertawa, kamu juga bisa!",
-      "Tertawa itu gratis, jadi pakai semua 😆"
+      "Today is all about your light. Shine bright like your favorite orange cat! 🌅",
+      "May your day be as warm and radiant as an orange sunrise. 🍊",
+      "Remember, every small step you take adds light to your path. ✨"
     ],
     "hitam": [
-      "Gelap? Tidak masalah, kucing hitam pun tetap lucu 😎",
-      "Tertawa bisa mengalahkan kegelapan!",
-      "Setiap tawa menambah cahaya dalam hati 🖤"
+      "Born to bloom, and bloom again—mysterious as a black cat, yet full of wonder. 🖤",
+      "Even in darkness, your light can shine through. 🌌",
+      "Embrace the mystery and magic of today. ✨"
     ],
     "putih": [
-      "Putih bersih, tawa juga bersih 😎",
-      "Hari ini, buat senyuman jadi momen spesial!",
-      "Tertawa bersama itu selalu menyenangkan 🤍"
+      "Wishing you a special day that is as wonderful and pure as a white cat's heart. 🤍",
+      "Let your heart be light, and your spirit be free today. 🕊️",
+      "A pure heart always attracts joy and love. 💖"
     ]
   },
   "anjing": {
     "golden": [
-      "Anjing lucu, hidup juga lucu 😎",
-      "Tertawa seperti Golden Retriever, hangat dan menyenangkan!",
-      "Setiap hari adalah kesempatan untuk senyum 🎉"
+      "Congratulations on successfully making it through another year, just like a loyal Golden Retriever 🐾",
+      "Your kindness and loyalty make the world brighter! ✨",
+      "Celebrate today knowing you are truly valued. 🎉"
     ],
     "husky": [
-      "Husky yang lucu = tawa tanpa batas 😎",
-      "Jangan lupa ketawa hari ini!",
-      "Hidup ini penuh petualangan dan tawa ❄️"
+      "Wishing you adventures and joy as boundless as a playful Husky ❄️",
+      "Keep chasing your dreams with energy and courage! 🐾",
+      "Your spirit is as unstoppable as the wind through snowy mountains. 🌨️"
     ],
     "bulldog": [
-      "Bulldog serius tapi lucu, seperti hidup kita 😎",
-      "Tertawa itu kuat, bahkan untuk yang paling tenang!",
-      "Senang hari ini, kuat esok hari 💛"
+      "Birthdays are the universe's way of saying you are worth celebrating—happy day, like a calm Bulldog! 🎉",
+      "May your day be filled with calm, joy, and warm moments. ☀️",
+      "Strong, steady, and wonderful—you are appreciated today and always. 💛"
     ]
   }
 };
@@ -38,11 +38,10 @@ const quotes = {
 let selectedAnimal = "";
 let selectedSub = "";
 
-// Deskripsi muncul 10 detik
 setTimeout(() => {
   document.getElementById('description').style.display = 'none';
   showFirstQuestion();
-}, 10000);
+}, 5000);
 
 function showFirstQuestion() {
   const q = document.getElementById('question');
@@ -97,32 +96,8 @@ function bukaAmplop() {
     const quoteDiv = document.getElementById('quote');
     quoteDiv.innerText = randomQuote;
     quoteDiv.style.opacity = 1;
-
-    const mainLagiBtn = document.createElement('button');
-    mainLagiBtn.innerText = "Main Lagi 🔄";
-    mainLagiBtn.onclick = resetGame;
-    mainLagiBtn.id = "mainLagiBtn";
-    document.body.appendChild(mainLagiBtn);
   }, 1000);
   changeBackground();
-}
-
-function resetGame() {
-  selectedAnimal = "";
-  selectedSub = "";
-
-  const amplop = document.getElementById('amplop');
-  amplop.style.display = 'none';
-  amplop.classList.remove('open');
-
-  const quoteDiv = document.getElementById('quote');
-  quoteDiv.style.opacity = 0;
-  quoteDiv.innerText = "";
-
-  const btn = document.getElementById('mainLagiBtn');
-  if (btn) btn.remove();
-
-  showFirstQuestion();
 }
 
 function changeBackground() {

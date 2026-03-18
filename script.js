@@ -1,14 +1,14 @@
+// ===== Quotes versi Bahasa Indonesia santai & menyentuh =====
 const quotes = {
   "kucing": {
-    "oren": "Like an orange cat that brightens every room it enters, your warmth and laughter light up the lives of everyone around you. Remember to take a moment for yourself too, because your heart deserves the same care that you give to others. ✨",
-    "hitam": "Mysterious and elegant like a black cat, your presence leaves a mark wherever you go. You always support and uplift others, and today is a reminder to let yourself shine and feel the love that you freely give. 🖤",
-    "putih": "Pure and gentle as a white cat, your kindness touches everyone around you. You carry so much love for others; don’t forget to nurture your own heart as you brighten the world. 🤍"
+    "oren": "Like an orange cat curiously exploring its world, kamu selalu penasaran sama hal-hal baru dan berani coba sesuatu yang berbeda, dan itu menurutku sangat keren. Even if u feel unsure sometimes, remember that every step u take is progress, dan kamu layak banget diapresiasi hari ini dan setiap hari ✨",
+    "hitam": "U move through the world with quiet mystery, like a black cat slipping through moonlight. Your presence lifts others, and even in the shadows, your light shines bright. Remember to care for yourself with the same love u give to everyone around u yh kak 🖤",
+    "putih": "Pure and gentle like a white cat, kamu selalu bikin orang di sekitar kamu merasa diperhatikan. Your kindness touches everyone, remember that your heart deserves love too 🤍"
   },
   "anjing": {
-    "golden": "Loyal and radiant like a Golden Retriever, you bring joy and comfort effortlessly. Your patience and warmth are gifts to everyone around you, and today is a moment to celebrate the amazing person you are. 🐾",
-    "husky": "Adventurous and spirited like a Husky running through snow, your energy inspires everyone who meets you. You give so much to others, yet your own dreams and happiness matter just as much. ❄️",
-    "bulldog": "Strong, steady, and caring like a Bulldog, your calm presence makes others feel safe and valued. Remember to honor your own journey and give yourself the love that you so freely share. 💛"
-  }
+    "golden": "Kamu punya cahaya sendiri, like a Golden Retriever, Kamu selalu bikin orang lain ngerasa dicintai dan dihargai. Bahkan ketika kamu lagi capek, kamu masih bisa menyebar kehangatan buat orang lain. Dunia ini jadi lebih berwarna karena ada kamu di dalamnya kak 💕",
+    "husky": "Kamu itu sgt berharga, never forget that. Bahkan saat kamu ngerasa lelah atau ragu, everything about u matters dan setiap langkah kecil yang kamu ambil itu sgt berarti entah buat kamu sendiri atau buat orang lain. Kamu amat sgt pantas buat dicintai, dihargai, dan dihormati, jangan lupa untuk menghargai diri kamu sendiri juga yaa 🌼🌟",
+    "bulldog": "Like a Bulldog enjoying the warm sun, kamu tu dari luar keliatan kuat bgt, but i know deep down kadang kamu nggak sekuat itu untuk menghadapi hari-hari ini. It's okay kalau kamu mau berhenti sejenak, take a deep breath and everything will be fine...💛"
 };
 
 let selectedAnimal = "";
@@ -69,13 +69,13 @@ function bukaAmplop() {
   amplop.classList.add('open');
 
   const quoteDiv = document.getElementById('quote');
-  const randomQuote = quotes[selectedAnimal][selectedSub];
+  const quoteText = quotes[selectedAnimal][selectedSub]; // string panjang
 
   setTimeout(() => {
-    quoteDiv.innerText = randomQuote;
+    quoteDiv.innerText = quoteText; // tampil full, bukan huruf per huruf
     quoteDiv.style.opacity = 1;
 
-    // Tombol Main Lagi
+    // tombol Main Lagi
     const mainLagiBtn = document.createElement('button');
     mainLagiBtn.innerText = "Main Lagi 🔄";
     mainLagiBtn.onclick = resetGame;
@@ -102,6 +102,20 @@ function resetGame() {
   if (btn) btn.remove();
 
   showFirstQuestion();
+}
+
+function changeBackground() {
+  const colors = [
+    'linear-gradient(45deg, #ff9a9e, #fad0c4)',
+    'linear-gradient(45deg, #a1c4fd, #c2e9fb)',
+    'linear-gradient(45deg, #fbc2eb, #a6c1ee)',
+    'linear-gradient(45deg, #fdfbfb, #ebedee)',
+    'linear-gradient(45deg, #84fab0, #8fd3f4)',
+    'linear-gradient(45deg, #ffecd2, #fcb69f)'
+  ];
+  const randomColor = colors[Math.floor(Math.random() * colors.length)];
+  document.body.style.background = randomColor;
+}  showFirstQuestion();
 }
 
 function changeBackground() {

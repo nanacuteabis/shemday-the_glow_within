@@ -38,11 +38,10 @@ const quotes = {
 let selectedAnimal = "";
 let selectedSub = "";
 
-// Deskripsi awal muncul 5 detik
 setTimeout(() => {
   document.getElementById('description').style.display = 'none';
   showFirstQuestion();
-}, 5000);
+}, 10000); // 10 detik
 
 function showFirstQuestion() {
   const q = document.getElementById('question');
@@ -99,7 +98,7 @@ function bukaAmplop() {
     quoteDiv.innerText = randomQuote;
     quoteDiv.style.opacity = 1;
 
-    // Buat tombol Main Lagi
+    // tombol Main Lagi muncul
     const mainLagiBtn = document.createElement('button');
     mainLagiBtn.innerText = "Main Lagi 🔄";
     mainLagiBtn.onclick = resetGame;
@@ -114,21 +113,17 @@ function resetGame() {
   selectedAnimal = "";
   selectedSub = "";
 
-  // Reset amplop
   const amplop = document.getElementById('amplop');
   amplop.style.display = 'none';
   amplop.classList.remove('open');
 
-  // Reset quote
   const quoteDiv = document.getElementById('quote');
   quoteDiv.style.opacity = 0;
   quoteDiv.innerText = "";
 
-  // Hapus tombol Main Lagi
   const btn = document.getElementById('mainLagiBtn');
   if (btn) btn.remove();
 
-  // Tampilkan pertanyaan awal lagi
   showFirstQuestion();
 }
 
@@ -138,4 +133,9 @@ function changeBackground() {
     'linear-gradient(45deg, #a1c4fd, #c2e9fb)',
     'linear-gradient(45deg, #fbc2eb, #a6c1ee)',
     'linear-gradient(45deg, #fdfbfb, #ebedee)',
-    'linear-gradient(45deg
+    'linear-gradient(45deg, #84fab0, #8fd3f4)',
+    'linear-gradient(45deg, #ffecd2, #fcb69f)'
+  ];
+  const randomColor = colors[Math.floor(Math.random() * colors.length)];
+  document.body.style.background = randomColor;
+}

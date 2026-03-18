@@ -1,37 +1,13 @@
 const quotes = {
   "kucing": {
-    "oren": [
-      "Today is all about your light. Shine bright like your favorite orange cat! 🌅",
-      "May your day be as warm and radiant as an orange sunrise. 🍊",
-      "Remember, every small step you take adds light to your path. ✨"
-    ],
-    "hitam": [
-      "Born to bloom, and bloom again—mysterious as a black cat, yet full of wonder. 🖤",
-      "Even in darkness, your light can shine through. 🌌",
-      "Embrace the mystery and magic of today. ✨"
-    ],
-    "putih": [
-      "Wishing you a special day that is as wonderful and pure as a white cat's heart. 🤍",
-      "Let your heart be light, and your spirit be free today. 🕊️",
-      "A pure heart always attracts joy and love. 💖"
-    ]
+    "oren": "Like an orange cat that brightens every room it enters, your warmth and laughter light up the lives of everyone around you. Remember to take a moment for yourself too, because your heart deserves the same care that you give to others. ✨",
+    "hitam": "Mysterious and elegant like a black cat, your presence leaves a mark wherever you go. You always support and uplift others, and today is a reminder to let yourself shine and feel the love that you freely give. 🖤",
+    "putih": "Pure and gentle as a white cat, your kindness touches everyone around you. You carry so much love for others; don’t forget to nurture your own heart as you brighten the world. 🤍"
   },
   "anjing": {
-    "golden": [
-      "Congratulations on successfully making it through another year, just like a loyal Golden Retriever 🐾",
-      "Your kindness and loyalty make the world brighter! ✨",
-      "Celebrate today knowing you are truly valued. 🎉"
-    ],
-    "husky": [
-      "Wishing you adventures and joy as boundless as a playful Husky ❄️",
-      "Keep chasing your dreams with energy and courage! 🐾",
-      "Your spirit is as unstoppable as the wind through snowy mountains. 🌨️"
-    ],
-    "bulldog": [
-      "Birthdays are the universe's way of saying you are worth celebrating—happy day, like a calm Bulldog! 🎉",
-      "May your day be filled with calm, joy, and warm moments. ☀️",
-      "Strong, steady, and wonderful—you are appreciated today and always. 💛"
-    ]
+    "golden": "Loyal and radiant like a Golden Retriever, you bring joy and comfort effortlessly. Your patience and warmth are gifts to everyone around you, and today is a moment to celebrate the amazing person you are. 🐾",
+    "husky": "Adventurous and spirited like a Husky running through snow, your energy inspires everyone who meets you. You give so much to others, yet your own dreams and happiness matter just as much. ❄️",
+    "bulldog": "Strong, steady, and caring like a Bulldog, your calm presence makes others feel safe and valued. Remember to honor your own journey and give yourself the love that you so freely share. 💛"
   }
 };
 

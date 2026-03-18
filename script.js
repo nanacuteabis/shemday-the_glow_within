@@ -14,10 +14,11 @@ const quotes = {
 let selectedAnimal = "";
 let selectedSub = "";
 
+// Deskripsi awal muncul 10 detik
 setTimeout(() => {
   document.getElementById('description').style.display = 'none';
   showFirstQuestion();
-}, 10000); // 10 detik
+}, 10000);
 
 function showFirstQuestion() {
   const q = document.getElementById('question');
@@ -66,15 +67,15 @@ function chooseSub(sub) {
 function bukaAmplop() {
   const amplop = document.getElementById('amplop');
   amplop.classList.add('open');
-  const qArray = quotes[selectedAnimal][selectedSub];
-  const randomQuote = qArray[Math.floor(Math.random() * qArray.length)];
+
+  const quoteDiv = document.getElementById('quote');
+  const randomQuote = quotes[selectedAnimal][selectedSub];
 
   setTimeout(() => {
-    const quoteDiv = document.getElementById('quote');
     quoteDiv.innerText = randomQuote;
     quoteDiv.style.opacity = 1;
 
-    // tombol Main Lagi muncul
+    // Tombol Main Lagi
     const mainLagiBtn = document.createElement('button');
     mainLagiBtn.innerText = "Main Lagi 🔄";
     mainLagiBtn.onclick = resetGame;

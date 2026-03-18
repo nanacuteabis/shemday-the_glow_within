@@ -9,6 +9,7 @@ const quotes = {
     "golden": "Kamu punya cahaya sendiri, like a Golden Retriever, Kamu selalu bikin orang lain ngerasa dicintai dan dihargai. Bahkan ketika kamu lagi capek, kamu masih bisa menyebar kehangatan buat orang lain. Dunia ini jadi lebih berwarna karena ada kamu di dalamnya kak 💕",
     "husky": "Kamu itu sgt berharga, never forget that. Bahkan saat kamu ngerasa lelah atau ragu, everything about u matters dan setiap langkah kecil yang kamu ambil itu sgt berarti entah buat kamu sendiri atau buat orang lain. Kamu amat sgt pantas buat dicintai, dihargai, dan dihormati, jangan lupa untuk menghargai diri kamu sendiri juga yaa 🌼🌟",
     "bulldog": "Like a Bulldog enjoying the warm sun, kamu tu dari luar keliatan kuat bgt, but i know deep down kadang kamu nggak sekuat itu untuk menghadapi hari-hari ini. It's okay kalau kamu mau berhenti sejenak, take a deep breath and everything will be fine...💛"
+  }
 };
 
 let selectedAnimal = "";
@@ -16,7 +17,8 @@ let selectedSub = "";
 
 // Deskripsi awal muncul 10 detik
 setTimeout(() => {
-  document.getElementById('description').style.display = 'none';
+  const desc = document.getElementById('description');
+  if (desc) desc.style.display = 'none';
   showFirstQuestion();
 }, 10000);
 
@@ -69,10 +71,10 @@ function bukaAmplop() {
   amplop.classList.add('open');
 
   const quoteDiv = document.getElementById('quote');
-  const quoteText = quotes[selectedAnimal][selectedSub]; // string panjang
+  const quoteText = quotes[selectedAnimal][selectedSub];
 
   setTimeout(() => {
-    quoteDiv.innerText = quoteText; // tampil full, bukan huruf per huruf
+    quoteDiv.innerText = quoteText;
     quoteDiv.style.opacity = 1;
 
     // tombol Main Lagi
@@ -102,6 +104,20 @@ function resetGame() {
   if (btn) btn.remove();
 
   showFirstQuestion();
+}
+
+function changeBackground() {
+  const colors = [
+    'linear-gradient(45deg, #ff9a9e, #fad0c4)',
+    'linear-gradient(45deg, #a1c4fd, #c2e9fb)',
+    'linear-gradient(45deg, #fbc2eb, #a6c1ee)',
+    'linear-gradient(45deg, #fdfbfb, #ebedee)',
+    'linear-gradient(45deg, #84fab0, #8fd3f4)',
+    'linear-gradient(45deg, #ffecd2, #fcb69f)'
+  ];
+  const randomColor = colors[Math.floor(Math.random() * colors.length)];
+  document.body.style.background = randomColor;
+    }  showFirstQuestion();
 }
 
 function changeBackground() {
